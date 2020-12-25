@@ -1,12 +1,9 @@
 package com.io.rj.userapi.model;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
-public class User {
+public class UserDto {
 
-    @Id
     private Long userId;
 
     private String name;

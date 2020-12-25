@@ -1,12 +1,10 @@
 package com.io.rj.userapi.controller;
 
-import com.io.rj.userapi.model.User;
+import com.io.rj.userapi.Entity.User;
 import com.io.rj.userapi.service.IUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -35,18 +33,18 @@ public class AuthenticationController {
     }
 
     @DeleteMapping("deleteUser/{id}")
-    public ResponseEntity <Object> deleteUser(@PathVariable Long id) {
+    public ResponseEntity <String> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
         return ResponseEntity.ok().body("Successfully Deleted");
     }
 
-    @PostMapping("/login")
-    public ResponseEntity <Object> login(@Valid @RequestBody String name, String password ){
-        userService.login(name, password);
-//        if(StringUtils.isEmpty(token)){
-//            return "no token found";
-//        }
-//        return token;
-        return ResponseEntity.ok().body("Logged in" + token);
-    }
+//    @PostMapping("/login")
+//    public ResponseEntity <Object> login(@Valid @RequestBody String name, String password ){
+//        userService.login(name, password);
+////        if(StringUtils.isEmpty(token)){
+////            return "no token found";
+////        }
+////        return token;
+//        return ResponseEntity.ok().body("Logged in" + token);
+//    }
 }

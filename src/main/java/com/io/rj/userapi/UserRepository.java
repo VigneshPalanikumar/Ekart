@@ -1,6 +1,6 @@
 package com.io.rj.userapi;
 
-import com.io.rj.userapi.model.User;
+import com.io.rj.userapi.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

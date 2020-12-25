@@ -1,7 +1,7 @@
 package com.io.rj.userapi.service;
 
 import com.io.rj.userapi.UserRepository;
-import com.io.rj.userapi.model.User;
+import com.io.rj.userapi.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +15,10 @@ public class UserServiceImpl implements IUser{
 
     @Override
     public User createUser(User user) {
-        userRepo.save(user);
-        return user;
+
+        User newUser = new User();
+        newUser = userRepo.save(user);
+        return newUser;
     }
 
     @Override

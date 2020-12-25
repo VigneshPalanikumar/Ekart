@@ -1,6 +1,6 @@
 package com.io.rj.userapi.service;
 
-import com.io.rj.userapi.model.User;
+import com.io.rj.userapi.Entity.User;
 
 import java.util.List;
 
